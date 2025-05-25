@@ -1,9 +1,9 @@
 export interface TodoItem {
-    id: string;
+    id: number;
     description: string;
-    status: string;
-    created_at: string;
+    done: boolean;
+    /* created_at: string;
     ends_at: string;
     priority: string;
-    tag: string;
+    tag: string; */
 }
