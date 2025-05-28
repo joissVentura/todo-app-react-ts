@@ -36,11 +36,11 @@ export const TodoListItem = ({ todoItem, onDelete, onToggleDoneTodo }: TodoListI
 
                     </div>
                     :
-                    <div className='p-2 w-full xl:justify-between xl:flex xl:flex-row'>
-                        <div className='w-fit flex-wrap xl:flex-auto'>
-                            <span className='max-lg:flex-col break-words whitespace-normal max-lg:w-full'>{description}</span>
+                    <div className='p-2 w-full xl:justify-between xl:flex xl:flex-row gap-2'>
+                        <div className='flex-wrap xl:flex-auto xl:max-w-[55%] w-full'>
+                            <span className='max-lg:flex-col break-words whitespace-normal'>{description}</span>
                         </div>
-                        <div className='flex flex-row justify-between items-center xl:flex-auto'>
+                        <div className='flex flex-row justify-between items-center xl:flex-auto xl:max-w-[45%] xl:w-[45%]'>
                             <span className='font-semibold'>{done ? status.finished : status.pending}</span>
                             <InputSwitch checked={checked} onChange={(e) => { handleChecked(e) }} title={checked ? 'Dejar pendiente' : 'Finalizar'} />
                             <PenIcon size={16} onClick={handleEditable} className='hover:cursor-pointer' title='Editar' />
